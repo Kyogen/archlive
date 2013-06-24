@@ -1,0 +1,6 @@
+#Create the user directory for live session
+if [ ! -d /home/arch ]; then
+    mkdir /home/arch && chown arch /home/arch
+fi
+# Copy files over to home
+su -c "cp -r /etc/skel/.* /etc/skel/* /home/arch/" arch
